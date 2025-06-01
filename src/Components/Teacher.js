@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import socket from "../socket";
-import ChatContainer from "./ChatContainer";
 import "../styles/Teacher.css"; 
 import LivePollResults from "./LivepollResult";
 
@@ -59,7 +58,7 @@ const Teacher = () => {
   };
 
   const fetchHistory = async () => {
-    const res = await fetch("https://live-polling-system-h2kx.onrender.com/api/poll-history");
+    const res = await fetch("https://server-intervue.vercel.app/api/poll-history");
     const data = await res.json();
     setHistory(data);
   };

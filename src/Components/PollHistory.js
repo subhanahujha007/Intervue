@@ -9,7 +9,7 @@ const PollHistory = () => {
   const [showChat, setShowChat] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/poll-history")
+    fetch("https://server-intervue.vercel.app//api/poll-history")
       .then((res) => res.json())
       .then((data) => {
         setHistory(data || []);
