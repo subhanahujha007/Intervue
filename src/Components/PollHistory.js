@@ -9,7 +9,7 @@ const PollHistory = () => {
   const [showChat, setShowChat] = useState(false);
 
   useEffect(() => {
-    fetch("https://localhost:3000/api/poll-history")
+    fetch("http://localhost:3001/api/poll-history")
       .then((res) => res.json())
       .then((data) => {
         setHistory(data || []);
